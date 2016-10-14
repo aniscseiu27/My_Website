@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <div class="container-fluid" style="min-height:95%; ">
+
+        <div class="row">
+            <div class="col-sm-12">
+            <center>
+        	{% include 'extends(about).html' %}
+        	</center>
+        	</div>
+        </div>
+
+        <br>
+
+        <marquee direction=right behavior=alternate scrollamount=7><h2 style="color:red">ENJOY OUR GALLARY</h2></marquee>
+
+        <marquee scrollamount="15" direction="up" behavior="alternate"><marquee scrollamount="15" direction="right" behavior="alternate"><img src="{% static 'img/animation/2.gif' %}" /></marquee></marquee>
+
+        <div class="row">
+            <div class="col-sm-12">
+            {% include 'extends1(about).html' %}
+        	</div>
+        </div>
+
+        <br>
+
+        <marquee behavior="scroll" direction="left">
+        	<h2 style="color:red">If U have any Query, please let Us know via aniscseiu@gmail.com :)</h2>
+        </marquee>
+
+    </div>
+
+
+{% endblock %}

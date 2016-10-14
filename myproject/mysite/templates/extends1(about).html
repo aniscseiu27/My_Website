@@ -1,0 +1,123 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<style>
+.mySlides {display:none}
+</style>
+<body>
+
+<div class="w3-content" style="max-width:1200px">
+  <img class="mySlides  w3-animate-zoom" src="{% static 'img/nature/3.jpeg' %}" style="width:100%">
+  <img class="mySlides  w3-animate-zoom" src="{% static 'img/nature/2.jpg' %}" style="width:100%">
+  <img class="mySlides  w3-animate-zoom" src="{% static 'img/nature/5.jpg' %}" style="width:100%">
+
+
+</div>
+
+<div class="w3-center">
+  <div class="w3-section">
+    <button class="w3-btn" onclick="plusDivs(-1)">❮ Prev</button>
+    <button class="w3-btn" onclick="plusDivs(1)">Next ❯</button>
+  </div>
+  <button class="w3-btn demo" onclick="currentDiv(1)">1</button> 
+  <button class="w3-btn demo" onclick="currentDiv(2)">2</button> 
+  <button class="w3-btn demo" onclick="currentDiv(3)">3</button>
+  <button class="w3-btn demo" onclick="currentDiv(4)">4</button> 
+  <button class="w3-btn demo" onclick="currentDiv(5)">5</button> 
+  <button class="w3-btn demo" onclick="currentDiv(6)">6</button>
+  <button class="w3-btn demo" onclick="currentDiv(7)">7</button> 
+  <button class="w3-btn demo" onclick="currentDiv(8)">8</button> 
+  <button class="w3-btn demo" onclick="currentDiv(9)">9</button>
+  <button class="w3-btn demo" onclick="currentDiv(10)">10</button> 
+  <button class="w3-btn demo" onclick="currentDiv(11)">11</button> 
+  <button class="w3-btn demo" onclick="currentDiv(12)">12</button> 
+  <button class="w3-btn demo" onclick="currentDiv(13)">13</button> 
+  <button class="w3-btn demo" onclick="currentDiv(14)">14</button> 
+  <button class="w3-btn demo" onclick="currentDiv(15)">15</button>
+  <button class="w3-btn demo" onclick="currentDiv(16)">16</button> 
+  <button class="w3-btn demo" onclick="currentDiv(17)">17</button> 
+  <button class="w3-btn demo" onclick="currentDiv(18)">18</button>
+  <button class="w3-btn demo" onclick="currentDiv(19)">19</button> 
+  <button class="w3-btn demo" onclick="currentDiv(20)">20</button> 
+  <button class="w3-btn demo" onclick="currentDiv(21)">21</button>
+  <button class="w3-btn demo" onclick="currentDiv(22)">22</button> 
+  <button class="w3-btn demo" onclick="currentDiv(23)">23</button> 
+  <button class="w3-btn demo" onclick="currentDiv(24)">24</button>
+  <button class="w3-btn demo" onclick="currentDiv(25)">25</button> 
+  <button class="w3-btn demo" onclick="currentDiv(26)">26</button> 
+  <button class="w3-btn demo" onclick="currentDiv(27)">27</button>
+  <button class="w3-btn demo" onclick="currentDiv(28)">28</button> 
+  <button class="w3-btn demo" onclick="currentDiv(29)">29</button> 
+  <button class="w3-btn demo" onclick="currentDiv(30)">30</button>
+  <button class="w3-btn demo" onclick="currentDiv(31)">31</button> 
+  <button class="w3-btn demo" onclick="currentDiv(32)">32</button> 
+  <button class="w3-btn demo" onclick="currentDiv(33)">33</button>
+  <button class="w3-btn demo" onclick="currentDiv(34)">34</button> 
+  <button class="w3-btn demo" onclick="currentDiv(35)">35</button> 
+  <button class="w3-btn demo" onclick="currentDiv(36)">36</button> 
+  <button class="w3-btn demo" onclick="currentDiv(37)">37</button> 
+  <button class="w3-btn demo" onclick="currentDiv(38)">38</button> 
+  <button class="w3-btn demo" onclick="currentDiv(39)">39</button>
+  <button class="w3-btn demo" onclick="currentDiv(40)">40</button> 
+  <button class="w3-btn demo" onclick="currentDiv(41)">41</button> 
+  <button class="w3-btn demo" onclick="currentDiv(42)">42</button>
+  <button class="w3-btn demo" onclick="currentDiv(43)">43</button> 
+  <button class="w3-btn demo" onclick="currentDiv(44)">44</button> 
+  <button class="w3-btn demo" onclick="currentDiv(45)">45</button>
+  <button class="w3-btn demo" onclick="currentDiv(46)">46</button> 
+  <button class="w3-btn demo" onclick="currentDiv(47)">47</button> 
+  <button class="w3-btn demo" onclick="currentDiv(48)">48</button>
+  <button class="w3-btn demo" onclick="currentDiv(49)">49</button> 
+  <button class="w3-btn demo" onclick="currentDiv(50)">50</button> 
+  <button class="w3-btn demo" onclick="currentDiv(51)">51</button> 
+  <button class="w3-btn demo" onclick="currentDiv(52)">52</button>
+  <button class="w3-btn demo" onclick="currentDiv(53)">53</button> 
+  <button class="w3-btn demo" onclick="currentDiv(54)">54</button> 
+  <button class="w3-btn demo" onclick="currentDiv(55)">55</button>
+  <button class="w3-btn demo" onclick="currentDiv(56)">56</button> 
+  <button class="w3-btn demo" onclick="currentDiv(57)">57</button> 
+  <button class="w3-btn demo" onclick="currentDiv(58)">58</button>
+  <button class="w3-btn demo" onclick="currentDiv(59)">59</button> 
+  <button class="w3-btn demo" onclick="currentDiv(60)">60</button> 
+  <button class="w3-btn demo" onclick="currentDiv(61)">61</button>
+  <button class="w3-btn demo" onclick="currentDiv(62)">62</button>
+  <button class="w3-btn demo" onclick="currentDiv(63)">63</button> 
+  <button class="w3-btn demo" onclick="currentDiv(64)">64</button> 
+  <button class="w3-btn demo" onclick="currentDiv(65)">65</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-red", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-red";
+}
+</script>
+
+</body>
+</html>

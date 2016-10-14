@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+
+
+{% block head_title %}Welcome | {{block.super}}{% endblock %}
+
+<style>
+	{% block style %}
+
+    .navbar-static-top{
+    	margin-bottom: 0px !important;
+    }
+
+	.jumbotron {
+		background-color:#C0C0C0;
+		color: #FFF;
+	}
+
+
+	{% endblock %}
+</style>
+ 
+{% block jumbotron %}
+
+{% if not user.is_authenticated %}
+
+<div class="jumbotron">
+<div class="container">
+<div class="row">
+  <div class="col-sm-7">
+    <h1 style="color:red">Coding IS Dreaming</h1>
+    <p style="color:red">“There are two ways of constructing a software design. One way is to make it so simple that there are obviously no deficiencies. And the other way is to make it so complicated that there are no obvious deficiencies.”
+   - C.A.R. Hoare <br> <br>
+    "Perfection [in design] is achieved, not when there is nothing more to add, but when there is nothing left to take away."
+-   Antoine de Saint-Exupéry</p>
+    <p>
+    <a class="btn btn-lg btn-primary" href="" role="button">Join Us &raquo;</a>
+     </p> 
+  </div>
+  
+  <div class="col-sm-5">
+
+  <iframe width="650" height="400" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+
+  </div>
+
+</div>
+</div>
+</div>
+
+{% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+{% if request.user.is_authenticated %}
+
+{% include 'blog/blog.html' %}
+
+    {% if queryset %}
+
+    <h1>Welcome Staff</h1>
+    <table class="table">
+    {% for instance in queryset %}
+        <tr><td>{{ forloop.counter }}</td><td>{{ instance.email }} </td><td>{{ instance.full_name }}</td><td>{{ instance.timestamp|timesince }} ago</td></tr>
+        {% if instance.email == "abcd@gmail.edu" %}
+        <tr><td>is equal</td></tr>
+        {% endif %}
+
+    {% endfor %}
+    </table>
+
+    {% endif %}
+
+{% else %}
+<div style="background-color: #D8BFD8" class="row">
+
+  <div class="col-sm-3 pull-right">
+			<p class="lead text-align-center">{{title}}</p>
+
+			<form method="POST", action="">{% csrf_token %}
+			{{form|crispy}}
+
+			<input class='btn btn-primary' type="submit" value="Sign Up" \>
+			</form>
+	</div>
+
+	<div class="col-sm-3">
+    <p class="lead text-align-center">Django &amp; Bootstrap</p>
+    <img src="{% static 'img/marketing1.jpg' %}" class="img-responsive" />
+    </div>
+
+    <div class="col-sm-3">
+    <p class="lead text-align-center">Created for starters<br>
+     <span class="fa-stack fa-lg fa-5x">
+    <i class="fa fa-comment-o fa-stack-2x"></i>
+    <i style="color:yellow" class="fa fa-bolt fa-stack-1x"></i>
+    </span>
+    </p>
+    </div>
+
+    <div class="col-sm-3">
+    <p class="lead text-align-center">Always Open Source<br> <br>
+    <span class="fa-stack fa-lg fa-5x">
+    <i class="fa fa-circle-o-notch fa-stack-2x"></i>
+    <i class="fa fa-github fa-stack-1x"></i>
+    </span>
+    </p>
+
+    </div>
+</div>
+
+{% endif %}
+ 
+{% endblock %}

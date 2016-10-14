@@ -1,0 +1,23 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body  {
+    background-image: url("{% static 'img/background_image/7.jpg' %}");
+}
+    </style>
+</head>
+<body>
+
+<center>
+
+ <img src="{% static 'img/animation/4.gif' %}" />
+  <h1 style="color:red">Successfully Sent Message</h1>
+  <br/>
+ <a class="btn btn-lg btn-primary" href="/contact/" role="button"><h3>Back_To_Contact</h3></a>
+</center>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends "post/post_list.html" %}
+{% load staticfiles %}
+
+{% block content %}
+ 
+<div class="col-sm-6 col-sm-offset-3">
+<h1>Form</h1>
+
+<form method="POST" action="" enctype="multipart/form-data">{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" class="btn btn-default" value="Create Post" />
+</form>
+
+<img src="{% static 'img/background_image/15.jpg' %}" height="500" width="800" />
+
+</div>
+
+{% endblock %}

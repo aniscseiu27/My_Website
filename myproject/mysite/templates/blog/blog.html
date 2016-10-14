@@ -1,0 +1,135 @@
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Learning OOP</title>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width-decice-width, initial-scale=1.0">
+
+    <style type="text/css">
+    html,
+    body {
+        height:100%;
+    }
+    </style>
+</head>
+
+<body class="body" style="background-color:#C0C0C0">
+    <div class="container-fluid" style="min-height:95%; ">
+        <div class="row">
+            <div class="col-sm-2">
+             <br><br>
+               <div class="well bs-sidebar" id="sidebar" style="background-color:#fff">
+                <ul class="nav nav-pills nav-stacked">
+                  <li><a href="/blog">NOTICEBOARD</a></li>
+                  <li><a href="/post/list">POSTS</a></li>
+                  <li><a href="/post/create">CREATE POST</a></li>
+                  </ul>
+               </div>
+            </div>
+
+             <div class="col-sm-6">
+              <div class="container-fluid" style="border:solid">
+                
+                <center>
+
+                 {% block content %}
+                 <center> <h2 style="color:red">NOTICE-BOARD</h1
+                 ></center>
+                    {% for post in object_list %}
+                      <h4>{{ post.date|date:"Y-m-d"  }} | <a href="/blog/{{post.id}}"> {{post.title}}</a></h4>
+                    {% endfor %}
+                 {% endblock %}
+                  
+                 {% block content2 %}
+                    <h4>{{post.date}}</h4>
+                    <h3 style="color:red">{{post.body|safe|linebreaks}}</h3>
+                 {% endblock %}
+
+                 </center>
+               </div>
+             </div>
+            <div class="col-sm-4">
+                <img src="{% static 'img/animation/3.gif' %}" />
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-2">
+          <br>
+
+          <br>
+          <div class="well bs-sidebar" id="sidebar" style="background-color:#fff;">
+           <ul class="nav nav-pills nav-stacked">
+            <li style="box-shadow: 10px 10px 5px #888888;"><a href="http://www.javatpoint.com/java-tutorial" target="blank">JAVA</a></li>
+            <li style="box-shadow: 10px 10px 5px #888888;"><a href="http://www.javatpoint.com/sql-tutorial" target="blank">SQL</a></li>
+            <li style="box-shadow: 10px 10px 5px #888888;"><a href="http://www.javatpoint.com/android-tutorial" target="blank">ANDROID</a></li>
+            <li style="box-shadow: 10px 10px 5px #888888;"><a href="http://www.javatpoint.com/c-programming-language-tutorial" target="blank">C-Prog</a></li>
+            <li style="box-shadow: 10px 10px 5px #888888;"><a href="http://www.javatpoint.com/python-tutorial" target="blank">PYTHON</a></li>
+            <li style="box-shadow: 10px 10px 5px #888888;"><a href="http://www.javatpoint.com/pl-sql-tutorial" target="blank">PL/SQL</a></li>
+            <li style="box-shadow: 10px 10px 5px #888888;"><a href="http://www.javatpoint.com/mongodb-tutorial target="blank"">MONGO-DB</a></li>
+            <li style="box-shadow: 10px 10px 5px #888888;"><a href="http://www.javatpoint.com/oracle-tutorial" target="blank">ORACLE</a></li>
+            <li style="box-shadow: 10px 10px 5px #888888;"><a href="http://www.javatpoint.com/cloud-computing-tutorial" target="blank">CLOUD</a></li>
+            <li style="box-shadow: 10px 10px 5px #888888;"><a href="http://www.javatpoint.com/hadoop-tutorial" target="blank">HADOOP</a></li>
+            <li style="box-shadow: 10px 10px 5px #888888;"><a href="http://www.javatpoint.com/excel-tutorial" target="blank">MS EXCEL</a></li>
+            <li style="box-shadow: 10px 10px 5px #888888;"><a href="http://www.javatpoint.com/mysql-tutorial" target="blank">MYSQL</a></li>
+            <li style="box-shadow: 10px 10px 5px #888888;"><a href="http://www.javatpoint.com/computer-fundamentals-tutorial" target="blank">COMPUTER BASIC</a></li>
+           </ul>
+          </div>
+         </div>
+
+         <div class="col-sm-7">
+                <br>
+                <center>
+                <div style="border:solid">
+                <h1 style="color:red">Enjoy Learning Programming</h1>
+                </div>
+                <br>
+                <br>
+                    {% include 'slideshow.html' %}
+                </center>
+            </div>
+
+         <div class="col-sm-3">
+          <br>
+
+          <br>
+          <div class="well bs-sidebar" id="sidebar" style="background-color:#fff;">
+           <ul class="nav nav-pills nav-stacked">
+            <li style="box-shadow: 10px 10px 5px #888888;"><a href="http://www.javatpoint.com/html-tutorial" target="blank">HTML</a></li>
+            <li style="box-shadow: 10px 10px 5px #888888;"><a href="http://www.javatpoint.com/css-tutorial" target="blank">CSS</a></li>
+            <li style="box-shadow: 10px 10px 5px #888888;"><a href="http://www.javatpoint.com/javascript-tutorial" target="blank">JAVASCRIPT</a></li>
+            <li style="box-shadow: 10px 10px 5px #888888;"><a href="http://www.javatpoint.com/jquery-tutorial" target="blank">jQuery</a></li>
+            <li style="box-shadow: 10px 10px 5px #888888;"><a href="http://www.javatpoint.com/jquery-ui-tutorial" target="blank">jQuery UI</a></li>
+            <li style="box-shadow: 10px 10px 5px #888888;"><a href="http://www.javatpoint.com/php-tutorial" target="blank">PHP</a></li>
+            <li style="box-shadow: 10px 10px 5px #888888;"><a href="http://www.javatpoint.com/xml-tutorial" target="blank"">XML</a></li>
+            <li style="box-shadow: 10px 10px 5px #888888;"><a href="http://www.javatpoint.com/json-tutorial" target="blank">JSON</a></li>
+            <li style="box-shadow: 10px 10px 5px #888888;"><a href="http://www.javatpoint.com/ajax-tutorial" target="blank">AJAX</a></li>
+            <li style="box-shadow: 10px 10px 5px #888888;"><a href="http://www.javatpoint.com/web-services-tutorial" target="blank">Web Server</a></li>
+            <li style="box-shadow: 10px 10px 5px #888888;"><a href="http://www.javatpoint.com/bootstrap-tutorial" target="blank">Bootstrap</a></li>
+            <li style="box-shadow: 10px 10px 5px #888888;"><a href="http://www.javatpoint.com/angularjs-tutorial" target="blank">Angular JS</a></li>
+            <li style="box-shadow: 10px 10px 5px #888888;"><a href="http://www.javatpoint.com/nodejs-tutorial" target="blank">Node.js</a></li>
+           </ul>
+          </div>
+         </div>
+      </div>
+    </div>
+
+    <footer>
+        <div class="container-fluid" style="margin-left:0px">
+        <br>
+        <p>
+        <a style="color:purple"href="https://www.facebook.com/" target="blank"><b>Facebook</b></a> | <a style="color:purple" href="https://www.google.com/search?client=ubuntu&channel=fs&q=linkdin&ie=utf-8&oe=utf-8" target="blank"><b>Linkdin</b></a> | <a style="color:purple" href="https://www.google.com/search?client=ubuntu&channel=fs&q=twitter&ie=utf-8&oe=utf-8" target="blank"><b>Twitter</b></a> | <a style="color:purple" href="https://www.google.com.bd/?gws_rd=cr&ei=RpLnV_iqCMeE6QSk6KnYDA" target="blank"><b>Google</b></a>
+        </p>
+        </div>
+    </footer>
+    
+</body>
+</html>
+
+
+
